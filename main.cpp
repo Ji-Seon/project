@@ -9,6 +9,6 @@ int main()
 {
 double solution;
 	ask();
-	solution = solve_ODE();
+//	solution = solve_ODE();
 	return 0;
 }

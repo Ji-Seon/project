@@ -9,3 +9,5 @@ void ask();
 
 // This is the end of the header guard
 #endif
+
+mv ~/Desktop/MyFile.rtf /Volumes/Backup/MyFolder

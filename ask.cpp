@@ -21,7 +21,7 @@ int i;
   cout << "The value you entered is ";  
   }
   
-  return 0;
+  return;
 
   // cout << "Type 2 for: Forward Euler with Boost library solver. \n";
   // cout << "Type 3 for: Charged particle motion in a vertical electric field. \n"
