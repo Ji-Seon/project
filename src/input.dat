@@ -10,13 +10,15 @@ solMethod = 1                   # 0 = Forward Euler
                                 # 2 = Runge-Kutta Cash-Karp (rkck)
                                 # 3 = Runge-Kutta-Fehlberg (rkf45)
 # Pick a step size to be had
-stepSize = 0.0001             # Smaller steps result in more accurate solutions! - Recommended in steps of 10^(-x), e.g. 0.1, 0.01, 0.001, etc...
+stepSize = 0.0001               # Smaller steps result in more accurate solutions! - Recommended in steps of 10^(-x), e.g. 0.1, 0.01, 0.001, etc...
 
 # Pick a number of steps to implement
-max_iter =   1000	      # Integer values only please
+max_iter =   1000	        # Integer values only please
 
-# Pick if you want to run in Verification mode (Only viable for problem 0)
-verificationMode = true       # true / false verification mode?
+# Pick if you want to run in Verification mode (Only viable for problem 0) - Compares numerical to analytical solution
+verificationMode = 0            # 0 = Run in Verification mode
+			        # 1 = Do not run in Verification mode
 
 # Pick if you want to run in debug mode
-debugMode = true              # true / false debug mode?
+debugMode = 0                   # 0 = Run in debug mode
+				# 1 = Do not run in debug mode
