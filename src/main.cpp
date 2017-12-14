@@ -11,7 +11,7 @@
 #include "selector.hpp"
 
 int main(int argc, char** argv){
-	int x=10;
+	
 	input read;
 
 	// reads input file "input.dat" and returns an object "read" containg parameters problem, solMethod, etc...
@@ -29,5 +29,5 @@ int main(int argc, char** argv){
 	}
 	
 
-return x;
+return 0;
 }
