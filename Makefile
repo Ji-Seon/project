@@ -14,11 +14,13 @@ INC := -I$(INC_DIR) -I$(TACC_GSL_INC) -I$(TACC_GRVY_INC)
 #list all OBJS here :) - corresponds to all .cpp files
 # OBJS=main.o progopt.o simple.o datatypes.o dumpsolution.o charged.o
 
+all: main
+
 CFLAGS := -O3
 
 debug: CFLAGS += -g -O0
 
-$(EXEC): $(OBJS)
+main: $(OBJS)
 	$(CC) $(CFLAGS) $(INC) -I$(INC_DIR) $(LDFLAGS) -o $@ $^
 
 %.o: %.cpp
@@ -32,10 +34,13 @@ clobber: clean
 
 # Clean deletes the current executable and any object files attributed
 clean: neat
-	rm -f $(OBJ)
+	rm -f *.o $(OBJ)
 
 neat:
 	$(RM) *~ .*~
 
 echo:
 	@echo $(OBJ)
+
+check: 
+	

@@ -13,7 +13,7 @@ using namespace std;
 void selector(input x)
 {
 ofstream myfile;
-myfile.open ("output.txt");
+myfile.open ("outputrkf45.txt");
 	
 	// verification mode on!!
 	if((x.verif == 0) && (x.problem == 0)){		
@@ -60,13 +60,13 @@ myfile.open ("output.txt");
 		hardSol = gsl_charged_trajectory(IVP, x, path);
 		
 		for(int j=0; j < x.max_iter; j++){
-			myfile << time << " " 
+			myfile
 			<< hardSol[j].x << " " 
 			<< hardSol[j].y << " " 
-			<< hardSol[j].z << " " 
-			<< hardSol[j].u << " " 
-			<< hardSol[j].v << " " 
-			<< hardSol[j].w << endl;
+			<< hardSol[j].z << " " << endl;
+		        //<< hardSol[j].u << " " 
+			//<< hardSol[j].v << " " 
+			//<< hardSol[j].w << endl;
 		time += x.stepSize;
 		}
 	}
